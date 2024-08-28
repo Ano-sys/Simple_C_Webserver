@@ -1,0 +1,13 @@
+#!/bin/sh
+ipa="127.0.0.1"
+while true
+do
+  echo "Hello World" | nc $ipa 3334
+  sleep 0.5
+  echo "World Goodnight" | nc $ipa 3334
+  sleep 0.5
+  echo "Server speak" | nc $ipa 3334
+  sleep 0.5
+  echo "Get ACK" | nc $ipa 3334
+  sleep 0.5
+done
