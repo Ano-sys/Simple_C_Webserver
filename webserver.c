@@ -180,6 +180,10 @@ void *await_calls(void *args){
         m->caller = nfd;
 
         add_message(m);
+        
+        // stop this thread do not read inputs anymore
+        if(strstr(m->message, "[STOP]"))
+            return NULL;
     }
 }
 
