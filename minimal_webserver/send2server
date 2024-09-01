@@ -1,0 +1,14 @@
+#!/bin/sh
+ip="127.0.0.1"
+port=3334
+while true
+do
+  echo "Hello World" | nc $ip $port
+  sleep 0.5
+  echo "World Goodnight" | nc $ip $port
+  sleep 0.5
+  echo "Server speak" | nc $ip $port
+  sleep 0.5
+  echo "Get ACK" | nc $ip $port
+  sleep 0.5
+done
